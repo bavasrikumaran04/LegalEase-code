@@ -1,0 +1,27 @@
+[theme]
+base = "dark"
+primaryColor = "#3E6FE0"
+backgroundColor = "#0B1120"
+secondaryBackgroundColor = "#131C2F"
+textColor = "#E6EAF2"
+borderColor = "#243049"
+showWidgetBorder = true
+baseRadius = "0.6rem"
+linkColor = "#8FB0FF"
+
+[theme.sidebar]
+backgroundColor = "#0E1627"
+secondaryBackgroundColor = "#16213A"
+
+[server]
+# Uploads are only used for an optional custom logo.
+maxUploadSize = 5
+headless = true
+
+[browser]
+# Do not send usage statistics from an app that handles legal documents.
+gatherUsageStats = false
+
+[client]
+toolbarMode = "minimal"
+showErrorDetails = "none"

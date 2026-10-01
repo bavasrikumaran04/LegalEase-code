@@ -1,0 +1,21 @@
+# LegalEase runtime dependencies (tested with Python 3.14; Python 3.10+ supported)
+
+# Backend API
+fastapi==0.142.2
+uvicorn==0.54.0
+pydantic==2.13.5
+
+# Frontend
+streamlit==1.64.0
+requests==2.34.2
+
+# AI - official Google Gen AI SDK (replaces the deprecated google-generativeai)
+google-genai==2.25.0
+
+# Document generation
+python-docx==1.2.0
+fpdf2==2.8.9
+Pillow==12.3.0
+
+# Configuration
+python-dotenv==1.2.3

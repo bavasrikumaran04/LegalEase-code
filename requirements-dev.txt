@@ -1,0 +1,6 @@
+# Development and test dependencies
+-r requirements.txt
+
+pytest==9.1.1
+httpx==0.28.1   # required by FastAPI's TestClient
+pypdf==6.19.0   # used by tests to read back generated PDFs

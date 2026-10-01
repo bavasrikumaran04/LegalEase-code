@@ -1,0 +1,36 @@
+# --- Secrets ------------------------------------------------------------
+# Never commit real credentials. Document variables in .env.example instead.
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# --- Python ---------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# --- Virtual environments -------------------------------------------------
+venv/
+.venv/
+env/
+
+# --- Tooling / caches -----------------------------------------------------
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# --- Editors / OS ---------------------------------------------------------
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# --- Generated documents (never persist user documents in the repo) ------
+exports/
+*.log

@@ -1,0 +1,47 @@
+# Keep the build context small and free of secrets.
+
+# Secrets
+.env
+.env.*
+.streamlit/secrets.toml
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Python caches and build output
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Tests and tooling caches
+tests/
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Version control and editors
+.git/
+.gitignore
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Generated documents and specs
+/*.pdf
+exports/
+*.log
+
+# Not needed at runtime
+scripts/
+requirements-dev.txt
+Dockerfile
+docker-compose.yml
+.dockerignore
