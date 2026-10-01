@@ -41,6 +41,7 @@ exports/
 
 # Not needed at runtime
 scripts/
+!scripts/render_start.sh
 requirements-dev.txt
 Dockerfile
 docker-compose.yml
