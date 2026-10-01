@@ -1,0 +1,26 @@
+# Render Blueprint: one web service runs both processes from the Dockerfile.
+# The FastAPI backend listens privately on 127.0.0.1:8000; Streamlit serves
+# the public UI on Render's $PORT. Set GEMINI_API_KEY in the dashboard.
+services:
+  - type: web
+    name: legalease
+    runtime: docker
+    plan: free
+    dockerCommand: >-
+      sh -c "uvicorn backend.main:app --host 127.0.0.1 --port 8000 &
+      exec streamlit run frontend/app.py --server.address 0.0.0.0
+      --server.port $PORT --server.headless true"
+    healthCheckPath: /_stcore/health
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GEMINI_MODEL
+        value: gemini-3.8-flash
+      - key: GEMINI_FALLBACK_MODELS
+        value: gemini-3.7-flash,gemini-3.5-flash
+      - key: BACKEND_URL
+        value: http://127.0.0.1:8000
+      - key: BACKEND_TIMEOUT_SECONDS
+        value: "300"
+      - key: LOG_LEVEL
+        value: INFO
