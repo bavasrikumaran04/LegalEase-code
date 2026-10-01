@@ -22,6 +22,7 @@ COPY backend/ backend/
 COPY frontend/ frontend/
 COPY assets/ assets/
 COPY .streamlit/ .streamlit/
+COPY scripts/render_start.sh scripts/render_start.sh
 
 RUN useradd --create-home --uid 10001 --shell /usr/sbin/nologin legalease
 USER legalease
